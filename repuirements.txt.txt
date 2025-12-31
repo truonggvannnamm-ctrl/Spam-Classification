@@ -1,30 +1,45 @@
-import pandas as pd
-import numpy as np
-import re
+pandas → xử lý dữ liệu dạng DataFrame
 
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-import seaborn as sns # Import seaborn for heatmap
+numpy → tính toán số học, mảng
 
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
+re → xử lý biểu thức chính quy (regex)
 
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import LinearSVC
+matplotlib.pyplot → vẽ biểu đồ cơ bản
 
-from sklearn.metrics import (
-    accuracy_score,
-    precision_score,
-    recall_score,
-    f1_score,
-    confusion_matrix,
-    classification_report # Add classification_report here
-)
+wordcloud.WordCloud → tạo word cloud
 
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+seaborn → trực quan hóa nâng cao, heatmap
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+sklearn.model_selection.train_test_split → chia dữ liệu train/test
+
+sklearn.feature_extraction.text.TfidfVectorizer → TF-IDF vectorizer
+
+sklearn.naive_bayes.MultinomialNB → mô hình Naive Bayes
+
+sklearn.linear_model.LogisticRegression → mô hình Logistic Regression
+
+sklearn.svm.LinearSVC → mô hình Linear SVM
+
+sklearn.metrics:
+
+accuracy_score → độ chính xác
+
+precision_score → precision
+
+recall_score → recall
+
+f1_score → F1-score
+
+confusion_matrix → ma trận nhầm lẫn
+
+classification_report → báo cáo chi tiết
+
+nltk:
+
+nltk.corpus.stopwords → stopwords tiếng Anh
+
+nltk.stem.WordNetLemmatizer → lemmatization
+
+nltk.download('stopwords') → tải stopwords
+
+nltk.download('wordnet') → tải WordNet cho lemmatization
