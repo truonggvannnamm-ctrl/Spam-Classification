@@ -59,7 +59,7 @@ Bộ dữ liệu ở trạng thái gần **cân bằng**:
 ### 3.4. Huấn luyện mô hình
 Trong dự án này, chúng tôi sử dụng 3 mô hình chính để phân loại email Spam/Ham:
 
-- **Naive Bayes (MultinomialNB)**  
+- Naive Bayes (MultinomialNB)
   - **Lý do chọn:**  
     - Phù hợp với dữ liệu văn bản, đặc biệt khi sử dụng TF-IDF hoặc Bag-of-Words.  
     - Dựa trên xác suất điều kiện của từng từ, mô hình dễ huấn luyện và rất nhanh trên tập dữ liệu lớn.  
@@ -69,7 +69,7 @@ Trong dự án này, chúng tôi sử dụng 3 mô hình chính để phân lo�
   - **Ứng dụng:**  
     - Dùng để đánh giá nhanh các mẫu email spam/ham, đặc biệt khi cần dự đoán trên số lượng lớn email.
 
-- **Logistic Regression (LR)**  
+- Logistic Regression (LR)
   - **Lý do chọn:**  
     - Là mô hình tuyến tính, dễ giải thích và triển khai.  
     - Hỗ trợ `class_weight` nếu dữ liệu mất cân bằng (tuy dataset của bạn cân bằng gần như 50/50).  
@@ -79,8 +79,8 @@ Trong dự án này, chúng tôi sử dụng 3 mô hình chính để phân lo�
   - **Ứng dụng:**  
     - Cung cấp một baseline ổn định và dễ so sánh với các mô hình khác.  
 
-- **Linear SVM (LinearSVC)**  
-  - **Lý do chọn:**  
+- Linear SVM (LinearSVC)
+  - **Lý do chọn:**
     - Thường đạt hiệu suất tốt trên dữ liệu văn bản nhiều chiều, đặc biệt với TF-IDF vectorization.  
     - Tối ưu cho bài toán phân loại nhị phân với số lượng đặc trưng lớn.  
   - **Ưu điểm:**  
@@ -107,41 +107,47 @@ Cấu trúc thư mục dự án:
 <img width="682" height="340" alt="image" src="https://github.com/user-attachments/assets/b9e7670e-303d-43ce-aee8-e8e155c84131" />
 
 ---
-## 5. HƯỚNG DẪN CÀI ĐẶT & THỨ TỰ THỰC THI
----
-### Bước 1: Cài đặt môi trường
-- Tạo môi trường ảo:
-```bash
-python -m venv venv
-### Bước 2: Chạy dự án theo thứ tự
+## 5.HƯỚNG DẪN CÀI ĐẶT VÀ THỨ TỰ THỰC THI
+1. Huấn luyện mô hình và đánh giá
 
-#### 1. Huấn luyện mô hình và đánh giá
-```bash
-python app/Class_Classification.jpynb
-Chi tiết các bước:
+Mở notebook huấn luyện:
 
-Đọc dữ liệu từ data/spam_and_ham_classification.csv
+jupyter notebook app/Class_Classification.ipynb
+
+
+Các bước thực hiện trong notebook:
+
+Đọc dữ liệu:
+
+  File: data/spam_and_ham_classification.csv
 
 Tiền xử lý văn bản:
 
-Loại bỏ ký tự đặc biệt
+- Loại bỏ ký tự đặc biệt
 
-Loại bỏ stopwords
+- Loại bỏ stopwords
 
-Chuyển đổi sang TF-IDF
+- Chuyển đổi sang TF-IDF
 
 Huấn luyện 3 mô hình chính:
 
-Naive Bayes (MultinomialNB)
+- Naive Bayes (MultinomialNB)
 
-Logistic Regression (LR)
+- Logistic Regression (LR)
 
-Linear SVM (LinearSVC)
+- Linear SVM (LinearSVC)
 
-Xuất kết quả đánh giá và báo cáo vào thư mục reports/
+Đánh giá và xuất báo cáo:
 
-Demo/inference
-app.pypy
+- Kết quả được lưu vào thư mục reports/
+
+2. Demo / Inference
+
+Chạy ứng dụng demo:
+
+python app/app.py
+
+Chú ý: Đảm bảo các mô hình đã được huấn luyện và lưu trước khi chạy app.
 ---
 ## 6. PHÂN TÍCH KẾT QUẢ
 
@@ -164,10 +170,15 @@ app.pypy
 - **Kết luận chung:**  
   - Mô hình Linear SVM kết hợp với tiền xử lý TF-IDF là giải pháp hiệu quả cho bài toán phân loại thư rác.  
   - Mức Recall cao đảm bảo rằng hầu hết email spam được phát hiện, giảm rủi ro bỏ sót spam.
+Bảng kết quả Train/Val/Test
 
 <img width="779" height="218" alt="image" src="https://github.com/user-attachments/assets/3e6bd7e2-df11-4409-8851-38a5e5de177a" />
 
-<img width="1473" height="989" alt="image" src="https://github.com/user-attachments/assets/b6aa895d-3b90-4c5d-8532-588b33eb286c" />
+ CONFUSION MATRIX
+ 
+ <img width="1473" height="989" alt="image" src="https://github.com/user-attachments/assets/a04f5c72-c7ed-4737-ba93-15990ca8192e" />
+
+
 ---
 ## Sinh viên thực hiện
 - Họ và tên: Trần Đình Mạnh
