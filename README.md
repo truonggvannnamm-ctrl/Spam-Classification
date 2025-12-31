@@ -147,7 +147,7 @@ Chạy ứng dụng demo:
 
 python app/app.py
 
-Chú ý: Đảm bảo các mô hình đã được huấn luyện và lưu trước khi chạy app.
+**Chú ý: Đảm bảo các mô hình đã được huấn luyện và lưu trước khi chạy app.**
 ---
 ## 6. PHÂN TÍCH KẾT QUẢ
 
@@ -170,6 +170,7 @@ Chú ý: Đảm bảo các mô hình đã được huấn luyện và lưu trư�
 - **Kết luận chung:**  
   - Mô hình Linear SVM kết hợp với tiền xử lý TF-IDF là giải pháp hiệu quả cho bài toán phân loại thư rác.  
   - Mức Recall cao đảm bảo rằng hầu hết email spam được phát hiện, giảm rủi ro bỏ sót spam.
+    
 Bảng kết quả Train/Val/Test
 
 <img width="779" height="218" alt="image" src="https://github.com/user-attachments/assets/3e6bd7e2-df11-4409-8851-38a5e5de177a" />
@@ -177,7 +178,6 @@ Bảng kết quả Train/Val/Test
  CONFUSION MATRIX
  
  <img width="1473" height="989" alt="image" src="https://github.com/user-attachments/assets/a04f5c72-c7ed-4737-ba93-15990ca8192e" />
-
 
 ---
 ## Sinh viên thực hiện
